@@ -1,5 +1,36 @@
-site_name: my_test
+site_name: Droplets - Reproducible and Collaborative Research Resources for Astronomy
+site_description: 'Material and references for training on reproducible and collaborative research'
+site_author: 'Javier Moldon'
+repo_url: 
+
 nav:
     - Home: index.md
-    - About: about.md
-theme: readthedocs
+    - Quick Start: quickstart.md
+    - Jupyter notebooks: jupyter.md
+    - "Collaborative science online: Github": github.md
+    - Version control with git: git.md
+    - Software management with conda: conda.md
+    - Python visualization and ipython widgets: interactive.md
+    - Binder: binder.md
+    - Snakemake: snakemake.md
+    - Containers: containers.md
+    - Reproducibility examples: reproducibility.md
+    - Testing: science.md
+
+#theme: 'material' # Excellent searchers. Too clear. No subsections
+#theme: windmill    # Very good search bar. Clean toc
+theme:
+    name: readthedocs
+    highlightjs: true
+          #theme: readthedocs
+          ##    - navigation_depth: 1
+          #    - titles_only: True
+
+markdown_extensions:
+  - toc:
+      permalink: ïƒ
+  - admonition
+  - pymdownx.arithmatex
+  - pymdownx.keys
+  - pymdownx.details
+  - pymdownx.superfences
