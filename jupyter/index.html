@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Javier Moldon">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Jupyter notebooks - Droplets - Reproducible and Collaborative Research Resources for Astronomy</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Jupyter notebooks";
+    var mkdocs_page_input_path = "jupyter.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Droplets - Reproducible and Collaborative Research Resources for Astronomy</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../quickstart/">Quick Start</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Jupyter notebooks</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#the-xxi-century-lab-book">The XXI century lab book</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#introduction-to-jupyter-notebooks">Introduction to Jupyter notebooks</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#set-up">Set up</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#install-jupyter-notebook">Install Jupyter Notebook</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#practical-exercise">Practical exercise</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#the-jupyter-notebook-dashboard">The Jupyter Notebook dashboard</a></li>
+        
+            <li><a class="toctree-l3" href="#the-very-basics">The very basics</a></li>
+        
+            <li><a class="toctree-l3" href="#magics">Magics</a></li>
+        
+            <li><a class="toctree-l3" href="#exploring-results-from-the-mrsa-workflow-in-a-jupyter-notebook">Exploring results from the MRSA workflow in a Jupyter notebook</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../github/">Collaborative science online: Github</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../git/">Version control with git</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../conda/">Software management with conda</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../interactive.md">Python visualization and ipython widgets</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../binder.md">Binder</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../snakemake.md">Snakemake</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../containers.md">Containers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../reproducibility.md">Reproducibility examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../science/">Testing</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Droplets - Reproducible and Collaborative Research Resources for Astronomy</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Jupyter notebooks</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="the-xxi-century-lab-book">The XXI century lab book<a class="headerlink" href="#the-xxi-century-lab-book" title="Permanent link">ïƒ</a></h1>
+<p>You have received an e-mail from a good colleague.</p>
+<div class="admonition note">
+<p class="admonition-title">email</p>
+<p>Hi!</p>
+<p>The other day my friend Ptolemy told me about a "nebulous mass in the breast of Cancer". I observed it with my new telescope and I could resolve about 40 individual stars! This is amazing, and it could be a good topic for a paper. If you have time, please see if you can find anything interesting in this region. </p>
+<p>R.A. 130.025 deg<br />
+Dec. 19.9833 deg</p>
+<p>Best regards,</p>
+<p>Galileo</p>
+</div>
+<p>You think it would be a good idea to explore the stellar population on this area. Because you are not sure what to expect you would like to try different approaches, so you decide to start a Jupyter notebook and explore a star catalog around those coordinates...</p>
+<h3>Objectives and scope</h3>
+
+<p>In this section we will see the value of Jupyter notebooks as a dynamic tool for exploratory analysis. We will learn how to initialize and navigate through notebooks, the basic structure and syntax to use a Jupyter notebook, the notebook cells and the Magic commands. As an example, we will do an exploratory analysis of a star population from the <em><a href="https://sci.esa.int/web/gaia">Gaia</a></em> catalog.</p>
+<!---
+Nice resources:
+
+https://jupyter.org/try
+
+
+-->
+
+<h2 id="introduction-to-jupyter-notebooks">Introduction to Jupyter notebooks<a class="headerlink" href="#introduction-to-jupyter-notebooks" title="Permanent link">ïƒ</a></h2>
+<p>The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain code, equations, visualizations and text. The functionality is partly overlapping with R Markdown (see the <a href="rmarkdown.md">tutorial</a>), in that they both use markdown and code chunks to generate reports that integrate results of computations with the code that generated them. Jupyter Notebook comes from the Python community while R Markdown was developed by RStudio, but you could use most common programming languages in either alternative. In practice though, it's quite common that R developers use Jupyter but probably not very common that Python developers use RStudio.</p>
+<h3 id="what-are-jupyter-notebooks-for">What are Jupyter notebooks for?<a class="headerlink" href="#what-are-jupyter-notebooks-for" title="Permanent link">ïƒ</a></h3>
+<p>An excellent question! Some applications could be:</p>
+<ul>
+<li>Python is lacking a really good IDE for doing exploratory scientific data analysis, like RStudio or Matlab. Some people use it simply as an alternative for that.</li>
+<li>The community around Jupyter notebooks is large and dynamic, and there are tons of tools for sharing, displaying or interacting with notebooks.</li>
+<li>An early ambition with Jupyter notebooks, and its predecessor IPython notebooks, was to be analogous to the lab notebook used in a wet lab. It would allow the data scientist to document her day-to-day work and interweave results, ideas, and hypotheses with the code. From a reproducibility perspective, this is one of the main advantages.</li>
+<li>Jupyter notebooks can be used, just as R Markdown, to provide a tighter connection between your data and your results by integrating results of computations with the code that generated them. They can also do this in an interactive way that makes them very appealing for sharing with others.</li>
+</ul>
+<p>As always, the best way is to try it out yourself and decide what to use it for!</p>
+<h3 id="tell-me-more">Tell me more<a class="headerlink" href="#tell-me-more" title="Permanent link">ïƒ</a></h3>
+<ul>
+<li>The <a href="http://jupyter.org">Jupyter project site</a> contains a lot of information and inspiration.</li>
+<li>The <a href="https://jupyter-notebook.readthedocs.io/en/stable/">Jupyter Notebook documentation</a>.</li>
+<li>A <a href="http://ipywidgets.readthedocs.io/en/stable/index.html">guide</a> to using widgets for creating interactive notebooks.</li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">A note on nomenclature</p>
+<ul>
+<li>Jupyter: a project to develop open-source software, open-standards, and services for interactive computing across dozens of programming languages. Lives at <a href="jupyter.org">jupyter.org</a>.</li>
+<li>Jupyter Notebook: A web application that you use for creating and managing notebooks. One of the outputs of the Jupyter project.</li>
+<li>Jupyter Lab: A web application that you use for creating and managing notebooks. One of the outputs of the Jupyter project.</li>
+<li>Jupyter notebook: The actual <code>.ipynb</code> file that constitutes your notebook.</li>
+</ul>
+</div>
+<h1 id="set-up">Set up<a class="headerlink" href="#set-up" title="Permanent link">ïƒ</a></h1>
+<p>This tutorial depends on files from the course Bitbucket repo. Take a look at the <a href="tutorial_intro.md">intro</a> for instructions on how to set it up if you haven't done so already. Then open up a terminal and go to <code>reproducible_research_course/jupyter</code>.</p>
+<h2 id="install-jupyter-notebook">Install Jupyter Notebook<a class="headerlink" href="#install-jupyter-notebook" title="Permanent link">ïƒ</a></h2>
+<p>If you have done the <a href="../conda/">Conda tutorial</a> you should know how to define an environment and install packages using Conda. Create an environment containing the following packages from the <code>conda-forge</code> channel. Don't forget to activate the environment.</p>
+<ul>
+<li><code>jupyter</code>: for running everything</li>
+<li><code>nb_conda</code>: for integrating Conda with Jupyter Notebook</li>
+<li><code>matplotlib</code>, <code>ipywidgets</code>, <code>mpld3</code>, and <code>seaborn</code>: for generating plots</li>
+<li><code>pandas</code>: for working with data frames and generating tables</li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>If you are doing these exercises through a Docker container you also need the run the following:
+<div class="highlight"><pre><span></span>mkdir -p -m <span class="m">700</span> /root/.jupyter/ <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">echo</span> <span class="s2">&quot;c.NotebookApp.ip = &#39;0.0.0.0&#39;&quot;</span> &gt;&gt; /root/.jupyter/jupyter_notebook_config.py
+</pre></div></p>
+</div>
+<h1 id="practical-exercise">Practical exercise<a class="headerlink" href="#practical-exercise" title="Permanent link">ïƒ</a></h1>
+<h2 id="the-jupyter-notebook-dashboard">The Jupyter Notebook dashboard<a class="headerlink" href="#the-jupyter-notebook-dashboard" title="Permanent link">ïƒ</a></h2>
+<p>One thing that sets Jupyter Notebook apart from what you might be used to is that it's a web application, i.e. you edit and run your code from your browser. But first you have to start the Jupyter Notebook server.</p>
+<div class="highlight"><pre><span></span>$ jupyter notebook --allow-root
+[I 18:02:26.722 NotebookApp] Serving notebooks from local directory: /Users/arasmus/Documents/projects/reproducible_research_course/jupyter
+[I 18:02:26.723 NotebookApp] 0 active kernels
+[I 18:02:26.723 NotebookApp] The Jupyter Notebook is running at:
+[I 18:02:26.723 NotebookApp] http://localhost:8888/?token=e03f10ccb40efc3c6154358593c410a139b76acf2cae785c
+[I 18:02:26.723 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 18:02:26.724 NotebookApp]
+
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=e03f10ccb40efc3c6154358593c410a139b76acf2cae785c
+[I 18:02:27.209 NotebookApp] Accepting one-time-token-authenticated connection from ::1
+</pre></div>
+
+<p>Jupyter Notebook probably opened up a web browser for you automatically, otherwise go to the address specified in the message in the terminal. Note that the server is running locally (as <a href="http://localhost:8888">http://localhost:8888</a>) so this does not require that you have an active internet connection. Also note that it says:</p>
+<div class="highlight"><pre><span></span>Serving notebooks from local directory: /Users/arasmus/Documents/projects/reproducible_research_course/jupyter.
+</pre></div>
+
+<p>Everything you do in your Notebook session will be stored in this directory, so you won't lose any work if you shut down the server.</p>
+<p><img alt="" src="../images/jupyter_dashboard.png" /></p>
+<p>What you're looking at is the Notebook dashboard. This is where you manage your files, notebooks, and kernels. The Files tab shows the files in your directory. If you've done the other tutorials the file names should look familiar; they are the files needed for running the RNA-seq workflow in Snakemake. The Running tab keeps track of all your processes. The third tab, Clusters, is used for parallel computing and won't be discussed further in this tutorial. The Conda tab lets us control our Conda environments. Let's take a quick look at that. You can see that I'm currently in the <code>jupyter_exercise</code> environment.</p>
+<p><img alt="" src="../images/jupyter_conda.png" /></p>
+<p>Let's start by creating an empty notebook by selecting the Files tab and clicking New &gt; Notebook &gt; Python [conda env:jupyter_exercise]. This will open up a new tab or window looking like this:</p>
+<p><img alt="" src="../images/jupyter_empty_nb.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you want to start Jupyter Notebooks on a cluster that you SSH to you have to do some port forwarding:
+<div class="highlight"><pre><span></span>ssh me@rackham.uppmax.uu.se -L8888:localhost:8888
+jupyter notebook --ip <span class="m">0</span>.0.0.0 --no-browser
+</pre></div></p>
+</div>
+<h2 id="the-very-basics">The very basics<a class="headerlink" href="#the-very-basics" title="Permanent link">ïƒ</a></h2>
+<p>Jupyter notebooks are made up out of cells, and you are currently standing in the first cell in your notebook. The fact that it has a green border indicates that it's in "Edit mode", so you can write stuff in it. 
+A blue border indicates "Command mode" (see below).
+Cells in Jupyter notebooks can be of two types: markdown or code.</p>
+<ul>
+<li><strong>Markdown</strong> - These cells contain static material such as captions, text, lists, images and so on. You express this using Markdown, which is a lightweight markup language. Markdown documents can then be converted to other formats for viewing (the document you're reading now is written in Markdown and then converted to HTML). The format is discussed a little more in detail in the <a href="rmarkdown.md">R Markdown tutorial</a>. Jupyter Notebook uses a dialect of Markdown called Github Flavored Markdown, which is described <a href="https://guides.github.com/features/mastering-markdown/">here</a>.</li>
+<li><strong>Code</strong> - These are the cells that actually do something, just as code chunks do in R Markdown. You can write code in dozens of languages and all do all kinds of clever tricks. You then run the code cell and any output the code generates, such as text or figures, will be displayed beneath the cell. We will get back to this in much more detail, but for now it's enough to understand that code cells are for executing code that is interpreted by a kernel (in this case the Python version in your Conda environment).</li>
+</ul>
+<p>Before we continue, here are some shortcuts that can be useful. Note that they are only applicable when in command mode (blue frames). Most of them are also available from the menus.
+These shortcuts are also available from the <strong>Help</strong> menu in your notebook (there's even an option there to edit shortcuts).</p>
+<ul>
+<li><span class="keys"><kbd class="key-enter">Enter</kbd></span>: enter Edit mode</li>
+<li><span class="keys"><kbd class="key-escape">Esc</kbd></span>: enter Command mode</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span>: run the cell</li>
+<li><span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span>: run the cell and select the cell below</li>
+<li><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span>: run the cell and insert a new cell below</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>: save the notebook</li>
+<li><span class="keys"><kbd class="key-tab">Tab</kbd></span>: for code completion or indentation</li>
+<li>m/y: toggle between Markdown and Code cells</li>
+<li>d-d: delete a cell</li>
+<li>a/b: insert cells above/below current cell</li>
+<li>x/c/v: cut/copy/paste cells</li>
+<li>o: toggle output of current cell</li>
+</ul>
+<h3 id="some-markdown-basics">Some Markdown basics<a class="headerlink" href="#some-markdown-basics" title="Permanent link">ïƒ</a></h3>
+<p>Let's use our first cell to create a header. Change the format from 
+Code to Markdown in the drop-down list above the cell. Double click on 
+the cell to enter editing mode (green frame) and input "# My notebook" 
+("#" is used in Markdown for header 1). Run the cell with Shift-Enter. 
+Tada!</p>
+<p>Markdown is a simple way to structure your notebook into sections with
+descriptive notes, lists, links, images etc.</p>
+<p>Below are some examples of what you can do in markdown. Paste all or parts
+of it into one or more cells in your notebook to see how it renders. Make 
+sure you set the cell type to Markdown.</p>
+<div class="highlight"><pre><span></span>## Introduction
+In this notebook I will try out some of the **fantastic** concepts of Jupyter Notebooks.
+
+## Markdown basics
+Examples of text attributes are:
+
+* *italics*
+* **bold**
+* `monospace`
+
+Sections can be separated by horizontal lines.
+
+---
+
+Blockquotes can be added, for instance to insert a Monty Python quote:
+
+    Spam! 
+    Spam! 
+    Spam! 
+    Spam!
+
+See [here](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html) for more information.    
+</pre></div>
+
+<h3 id="writing-code">Writing code<a class="headerlink" href="#writing-code" title="Permanent link">ïƒ</a></h3>
+<p>Now let's write some code! Since we chose a Python kernel, Python would be the native language to run in a cell. Enter this code in the second cell and run it:</p>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+</pre></div>
+
+<p>Note how the output is displayed below the cell. This interactive way of working is one of the things that sets Jupyter Notebook apart from RStudio and R Markdown. R Markdown is typically rendered top-to-bottom in one run, while you work <em>in</em> a Jupyter notebook in a different way. This has partly changed with newer versions of RStudio, but it's probably still how most people use the two tools. Another indication of this is that there is no (good) way to hide the code cells if you want to render your Jupyter notebook to a cleaner looking report (for a publication for example).</p>
+<p>What <strong>is</strong> a Jupyter notebook? Let's look a little at the notebook we're currently working in. Jupyter Notebook saves it every minute or so, so you will already have it available. We can be a little meta and do this from within the notebook itself. We do it by running some shell commands in the third code cell instead of Python code. This very handy functionality is possible by prepending the command with <code>!</code>. Try <code>!ls</code> to list the files in the current directory.</p>
+<p>Aha, we have a new file called <code>Untitled.ipynb</code>! This is our notebook. Look at the first ten lines of the file by using <code>!head Untitled.ipynb</code>. Seems like it's just a plain old JSON file. Since it's a text file it's suitable for version control with for example Git. It turns out that Github and Jupyter notebooks are the best of friends, as we will see more of later. This switching between languages and whatever-works mentality is very prominent within the Jupyter notebook community.</p>
+<p>Variables defined in cells become variables in the global namespace. You can therefore share information between cells. Try to define a function or variable in one cell and use it in the next. For example:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_me</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+
+<p>and</p>
+<div class="highlight"><pre><span></span><span class="n">print_me</span><span class="p">(</span><span class="s2">&quot;Hi!&quot;</span><span class="p">)</span>
+</pre></div>
+
+<p>Your notebook should now look something like this.</p>
+<p><img alt="" src="../images/jupyter_basic_update.png" /></p>
+<p>The focus here is not on how to write Markdown or Python; you can make really pretty notebooks with Markdown and you can code whatever you want with Python. Rather, we will focus on the Jupyter Notebook features that allow you to do a little more than that.</p>
+<div class="admonition note">
+<p class="admonition-title">Quick recap</p>
+<p>In this section we've learned:</p>
+<ul>
+<li>That a Jupyter notebook consists of a series of cells, and that they can be either markdown or code cells.</li>
+<li>That we execute the code in a code cell with the kernel that we chose when opening the notebook.</li>
+<li>We can run shell commands by prepending them with <code>!</code>.</li>
+<li>A Jupyter notebook is simply a text file in JSON format.</li>
+</ul>
+</div>
+<h2 id="magics">Magics<a class="headerlink" href="#magics" title="Permanent link">ïƒ</a></h2>
+<p>Magics constitute a simple command language that significantly extends the power of Jupyter notebooks. There are two types of magics:</p>
+<ul>
+<li>Line magics - Commands that are prepended by "%", and whose arguments only extend to the end of the line.</li>
+<li>Cell magics - Commands that start with <code>%%</code> and then applies to the whole cell. Must be written on the first line of a cell.</li>
+</ul>
+<p>Now list all available magics with <code>%lsmagic</code> (which itself is a magic). You add a question mark to a magic to show the help (e.g. <code>%lsmagic?</code>). Some of them act as shortcuts for commonly used shell commands (<code>%ls</code>, <code>%cp</code>, <code>%cat</code>, ..). Others are useful for debugging and optimizing your code (<code>%timeit</code>, <code>%debug</code>, <code>%prun</code>, ..).</p>
+<p>A very useful magic, in particular when using shell commands a lot in your work, is <code>%%capture</code>. This will capture the stdout/stderr of any code cell and store them in a Python object. Run <code>%%capture?</code> to display the help and try to understand how it works. Try it out with either some Python code, other magics or shell commands.</p>
+<details class="note"><summary>Click to see one example</summary><div class="highlight"><pre><span></span>%%capture output
+%%bash
+echo &quot;Print to stdout&quot;
+echo &quot;Print to stderr&quot; &gt;&amp;2
+</pre></div>
+
+<p>and in another cell</p>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;stdout:&quot;</span> <span class="o">+</span> <span class="n">output</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;stderr:&quot;</span> <span class="o">+</span> <span class="n">output</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+</pre></div>
+
+</details>
+<p>The <code>%%script</code> magic is used for specifying a program (bash, perl, ruby, ..) with which to run the code (similar to a shebang). For some languages it's possible to use these shortcuts:</p>
+<ul>
+<li><code>%%ruby</code></li>
+<li><code>%%perl</code></li>
+<li><code>%%bash</code></li>
+<li><code>%%html</code></li>
+<li><code>%%latex</code></li>
+<li><code>%%R</code> (here you have to first install the rpy2 extension, for example with Conda, and then load with <code>%load_ext rpy2.ipython</code>)</li>
+</ul>
+<p>Try this out if you know any of the languages above. Otherwise you can always try to print the quadratic formula with LaTeX!
+<div class="highlight"><pre><span></span>\begin{array}{*{20}c} {x = \frac{{ - b \pm \sqrt {b^2 - 4ac} }}{{2a}}} &amp; {{\rm{when}}} &amp; {ax^2 + bx + c = 0} \\ \end{array}
+</pre></div></p>
+<p>Python's favorite library for plotting, matplotlib, has its own magic as well: <code>%matplotlib</code>. Try out the code below, and you should hopefully get a pretty sine wave.</p>
+<div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">line</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+
+<p>By default rendering is done as rasterized images which can make the quality poor. To render 
+in scalable vector graphics format add the following line magic</p>
+<div class="highlight"><pre><span></span><span class="o">%</span><span class="n">config</span> <span class="n">InlineBackend</span><span class="o">.</span><span class="n">figure_format</span> <span class="o">=</span> <span class="s1">&#39;svg&#39;</span>
+</pre></div>
+
+<p>Try it by adding it to the cell with the lineplot and run it again. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The <code>%matplotlib inline</code> and <code>%config InlineBackend.figure_format = 'svg'</code> line 
+magics are only required once per notebook. You could for instance 
+add them to the first cell where you import matplotlib for plotting.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can capture the output of some magics directly like this:
+<div class="highlight"><pre><span></span><span class="n">my_dir</span> <span class="o">=</span> <span class="o">%</span><span class="n">pwd</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dir</span><span class="p">)</span>
+</pre></div></p>
+</div>
+<h2 id="exploring-results-from-the-mrsa-workflow-in-a-jupyter-notebook">Exploring results from the MRSA workflow in a Jupyter notebook<a class="headerlink" href="#exploring-results-from-the-mrsa-workflow-in-a-jupyter-notebook" title="Permanent link">ïƒ</a></h2>
+<p>As you might remember from the <a href="tutorial_intro.md">intro</a>, we are attempting 
+to understand how lytic bacteriophages can be used as a future therapy 
+for the multiresistant bacteria MRSA (methicillin-resistant <em>Staphylococcus aureus</em>). 
+We have already defined the project environment in the <a href="../conda/">Conda tutorial</a> 
+and set up the workflow in the <a href="snakemake.md">Snakemake tutorial</a>. Here 
+we explore the results from a the snakemake workflow in a Jupyter notebook
+ as an example of how you can document your day-to-day work as a dry lab scientist.<br />
+We will first create a report similar to the one in the <a href="rmarkdown.md">R Markdown tutorial</a> 
+then generate and visualize read coverage across samples for the <em>S. aureus</em> genome.</p>
+<h3 id="update-the-current-environment">Update the current environment<a class="headerlink" href="#update-the-current-environment" title="Permanent link">ïƒ</a></h3>
+<p>First update your current jupyter conda environment using the <code>environment.yml</code> file:</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Run the conda update command below in your terminal (not in the 
+ notebook) with the jupyter exercise environment active.</p>
+</div>
+<div class="highlight"><pre><span></span>conda env update -f environment.yml
+</pre></div>
+
+<h3 id="open-a-new-notebook">Open a new notebook<a class="headerlink" href="#open-a-new-notebook" title="Permanent link">ïƒ</a></h3>
+<p>If you look at the Jupyter dashboard in your browser there should be a 
+notebook called <code>mrsa_notebook.ipynb</code>. Now open the notebook with File &gt; Open.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Using what you've learned about markdown in notebooks, add headers 
+and descriptive text to subdivide sections as you add them. This will
+help you train how to structure and keep note of your work with a 
+notebook.</p>
+</div>
+<p>You will see that the notebook contains only two cells: one with some 
+import statements and one with two function definitions. We'll come back 
+to those later. Now, run the cells and add a new empty cell to the notebook. 
+Typically the snakemake workflow will be executed from a terminal but let's 
+try to actually run the workflow directly from within the Jupyter notebook. </p>
+<p>In the current directory you'll find the necessary <code>Snakefile</code> and <code>config.yml</code> 
+to run the workflow. In an empty cell in your notebook, add code to 
+run the workflow then run the cell.     </p>
+<p>......</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../github/" class="btn btn-neutral float-right" title="Collaborative science online: Github">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../quickstart/" class="btn btn-neutral" title="Quick Start"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../quickstart/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../github/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
