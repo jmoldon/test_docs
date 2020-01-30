@@ -30,7 +30,7 @@ markdown_extensions:
   - toc:
       permalink: True
   - admonition
-    #  - pymdownx.arithmatex
-    #  - pymdownx.keys
-    #  - pymdownx.details
-    #  - pymdownx.superfences
+  - pymdownx.arithmatex
+  - pymdownx.keys
+  - pymdownx.details
+  - pymdownx.superfences
